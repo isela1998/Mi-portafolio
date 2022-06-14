@@ -1,0 +1,736 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;700&display=swap');
+
+/* GENERAL */
+:root{
+    --principal-color: #34B0BE;
+    --accent-color: #FF4F6F;
+    --dark-color: #061f1c;
+    --light-gray: #ADADAD;
+    --light-color: #f6f8f8;
+}
+
+
+*{
+    margin: 0;
+    padding: .4rem;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body{
+    background-color: var(--light-color);
+}
+
+h2{
+    margin-top: 2rem!important;
+}
+
+a{
+    text-decoration: none;
+    padding: 0;
+    color: black;
+}
+
+/* NAVBAR */
+
+nav{
+    background-color: var(--light-color);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.25rem;
+    height: 60px;
+    right: 0;
+    z-index: 200;
+    margin-bottom: 1rem;
+}
+
+.active{
+    color: var(--principal-color)!important;
+}
+
+nav > div > img{
+    width: 45px;
+}
+
+input#header-menu{
+    visibility: hidden;
+}
+
+nav > ul > li{
+    width: 100%;
+    border-bottom: solid var(--light-gray) 1px;
+}
+
+input#header-menu ~ ul{
+    display: none;
+    position: absolute;
+    background-color: var(--light-color);
+    width: 100%;
+    height: calc( 100vh - 60px );
+    padding: 2rem 1rem;
+    flex-direction: column;
+    align-items: start;
+    list-style: none;
+    z-index: 20;
+    gap: 2rem;
+    top: 60px;
+    left: 0;
+}
+
+input#header-menu:checked ~ ul{
+    display: flex;
+}
+
+/* HEADER */
+
+.logo img{
+    position: absolute;
+    width: 21%;
+    padding-left: 0;
+    z-index: 10;
+}
+
+.section-header{
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.section-image{
+    width: 55%;
+    padding: 0;
+    display: flex;
+    align-items: flex-end;
+    background-image: url(../images/Group\ 85.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    margin-top: 18%;
+    z-index: 100;
+}
+
+.section-image img{
+    width: 90%;
+    margin-left: 4%;
+    padding-bottom: 0;
+}
+
+.section-about-me{
+    width: 45%;
+    margin-top: 10%;
+}
+
+.Im{
+    color: var(--accent-color);
+    padding-left: 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.title{
+    padding-top: 0;
+    padding-left: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.icons-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-left: 0;
+    border-bottom: solid var(--light-gray) 1px;
+}
+
+.icons-box a{
+    width: 28px;
+    height: 28px;
+    margin-right: 5%;
+    padding: .3rem;
+    border: solid var(--principal-color) 1px;
+    border-radius: 50%;
+}
+
+.icons-box a img{
+    width: 18px;
+    height: 18px;
+    padding: 2px;
+}
+
+.contact{
+    font-size: 13px;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: var(--accent-color);
+    text-decoration: none;
+    color: #FFFFFF;
+    padding-right: 2rem;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+}
+
+.section-about-me a span{
+    background-image: url(../images/mail\ 3.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: .5rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* SERVICES SECTION */
+
+.services{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-top: 1.5rem;
+}
+
+.services h2{
+    color: var(--accent-color);
+    padding-right: 1.5rem;
+}
+
+.arrow-left{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(210, 210, 210);
+    border: solid rgb(210, 210, 210) 1px;
+    border-radius: 50%;
+    margin-right: 1em;
+    margin-top: 2rem;
+    padding: 0;
+}
+
+.arrow-right{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: var(--accent-color);
+    border: solid var(--accent-color) 1px;
+    border-radius: 50%;
+    margin-right: 1em;
+    margin-top: 2rem;
+    padding: 0;
+}
+
+.services-box, .portfolio-box, .contact-box{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.services-box div, .portfolio-box div, .contact-box div{
+    width: 47%;
+    padding-top: 1rem;
+    border: solid black 1px;
+    background-color: white;
+    border: white;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.services-box img, .portfolio-box img{
+    padding: 0;
+    width: 50px;
+    height: 50px;
+}
+
+.services-box div p{
+    color: var(--light-gray);
+    font-size: 14px;
+}
+
+.services-box img{
+    width: 40%;
+}
+
+/* ABOUT ME SECTION */
+
+.logo-1{
+    display: flex;
+    position: absolute;
+    justify-content: flex-end;
+    width: 95%;
+}
+
+.logo-1 img{
+    width: 40%;
+}
+
+.about-me h2{
+    color: var(--accent-color);
+    padding-top: 2rem;
+}
+
+.about-me p{
+    color: var(--light-gray);
+    text-align: justify;
+}
+
+.logos-boxes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1em;
+}
+
+.logos-boxes img{
+    width: 50px;
+    height: 50px;
+}
+
+.logos-boxes{
+    color: var(--light-gray);
+}
+
+.hide{
+    display: none;
+}
+
+/* SKILLS */
+.skills{
+    padding-top: 1.6rem;
+}
+
+.skills h2{
+    color: var(--accent-color);
+}
+
+.skills-boxes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.box-percentage-95, .box-percentage-85, .box-percentage-70{
+    position: relative;
+    width: 30%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--principal-color);
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.box-percentage-95:before{
+    content: "";
+    position: absolute;
+    width: 85%;
+    height: 1px;
+    top: 0;
+    left: 0%;
+    border-top: solid var(--principal-color) 5px;
+}
+
+.box-percentage-85:before{
+    content: "";
+    position: absolute;
+    width: 75%;
+    height: 1px;
+    top: 0;
+    left: 0%;
+    border-top: solid var(--principal-color) 5px;
+}
+
+.box-percentage-70:before{
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 1px;
+    top: 0;
+    left: 0%;
+    border-top: solid var(--principal-color) 5px;
+}
+
+.box-text{
+    padding-left: 2rem;
+    font-weight: 600;
+}
+
+.portfolio h2, .contact-info h2{
+    color: var(--accent-color);
+    padding-top: 2rem;  
+}
+
+.portfolio a{
+    color: var(--dark-color)!important;
+}
+
+/* CONTACT */
+.contact-box small{
+    word-break: break-all;
+}
+
+/* FOOTER */
+footer{
+    margin-top: 4rem;
+    background-color: white;
+    padding: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--principal-color);
+}
+
+@media screen and ( min-width: 480px ) {
+    .section-about-me{
+        padding-top: 2rem;
+    }
+    
+    .Im{
+        font-size: 1.5rem;
+    }
+    
+    .title{
+        font-size: 2.3rem;
+    }
+    
+    .icons-box a{
+        width: 32px;
+        height: 32px;
+    }
+    
+    .icons-box a img{
+        width: 22px;
+        height: 22px;
+        padding: 3px;
+    }
+    
+    .contact{
+        font-size: 16px;
+    }
+
+    .logos-boxes img{
+        width: 70px;
+        height: 70px;
+    }
+
+    .box-percentage-95, .box-percentage-85, .box-percentage-70{
+        width: 35%;
+        padding: 1.5rem;
+        font-size: 2rem;
+    }
+
+    .box-text{
+        padding-left: 2rem;
+        font-size: 1.2rem;
+    }
+
+    .logo img{
+        width: 22%;
+    }
+
+}
+
+@media screen and ( min-width: 600px ) {
+    .section-about-me{
+        padding-top: 2rem;
+    }
+    
+    .Im{
+        font-size: 1.8rem;
+    }
+    
+    .title{
+        font-size: 2.6rem;
+    }
+    
+    .icons-box a{
+        width: 36px;
+        height: 36px;
+    }
+    
+    .icons-box a img{
+        width: 26px;
+        height: 26px;
+        padding: 3px;
+    }
+    
+    .contact{
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .section-image {
+        width: 50%;
+        margin-top: 15%;
+    }
+    
+    .section-about-me{
+        padding: 1rem;
+        padding-top: 1rem;
+    }
+    
+    .Im{
+        font-size: 2.5rem;
+    }
+    
+    .title{
+        font-size: 3.8rem;
+    }
+    
+    .icons-box a{
+        width: 42px;
+        height: 42px;
+    }
+    
+    .icons-box a img{
+        width: 32px;
+        height: 32px;
+        padding: 5px;
+    }
+    
+    .contact{
+        font-size: 22px;
+    }
+
+    .arrow-left{
+        width: 40px;
+        height: 40px;
+    }
+    
+    .arrow-right{
+        width: 40px;
+        height: 40px;
+    }
+
+    h2{
+        font-size: 1.8rem;
+    }
+
+    h3{
+        font-size: 1.4rem;
+    }
+
+    p, .services-box div p{
+        font-size: 1.2rem;
+    }
+
+    h4{
+        font-size: 1.2rem; 
+    }
+
+    small{
+        font-size: 1rem;
+    }
+
+    .contact-box div{
+        padding: 1.5rem;
+    }
+
+    footer{
+        font-size: 1.5rem;
+    }
+
+    .logo img{
+        width: 19%;
+    }
+
+    .logo-1 img{
+        width: 30%;
+    }
+  
+}
+
+@media screen and (min-width: 1024px) {
+    .section-about-me{
+        padding: 3rem;
+        padding-top: .5rem;
+    }
+    
+    .icons-box{
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    
+    .Im{
+        font-size: 3rem;
+    }
+    
+    .title{
+        font-size: 4.5rem;
+    }
+    
+    .icons-box a{
+        width: 55px;
+        height: 55px;
+    }
+    
+    .icons-box a img{
+        width: 45px;
+        height: 45px;
+        padding: 7px;
+    }
+    
+    .contact{
+        font-size: 26px;
+    }
+
+    h2{
+        font-size: 2.2rem;
+    }
+
+    h3{
+        font-size: 2rem;
+    }
+
+    .services{
+        padding-top: 2.5rem;
+    }
+
+    p, .services-box div p{
+        font-size: 1.5rem;
+    }
+
+    h4{
+        font-size: 1.6rem; 
+    }
+
+    small{
+        font-size: 1.2rem;
+    }
+
+    .box-text{
+        font-size: 1.6rem;
+    }
+
+    .contact-box div{
+        padding: 2rem;
+    }
+
+    .header-menu input{
+        display: none;
+        visibility: hidden;
+    }
+
+    .header-menu label{
+        display: none;
+        visibility: hidden;
+    }
+
+    input#header-menu ~ ul {
+        display: flex;
+        position: fixed;
+        justify-content: flex-end;
+        height: 25px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        top: 15px;
+        align-items: center;
+    }
+
+    nav > ul > li {
+        width: auto;
+        border: hidden;
+        font-weight: 600;
+    }
+
+    .skills{
+        padding-top: 2rem;
+    }
+
+    .logo-1 img{
+        width: 25%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    nav > ul > li {
+        font-size: 1.2rem;
+    }
+
+    .logo img{
+        width: 14%;
+    }
+
+    .section-image{
+        margin-top: 10%;
+    }
+
+    .logos-boxes img{
+        width: 70px;
+        height: 70px;
+        padding: 4px;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .logo img{
+        width: 10%;
+    }
+
+    .section-image{
+        margin-top: 8%;
+        width: 45%;
+    }
+    
+    .section-image img{
+        width: 85%;
+        margin-left: 4%;
+        padding-bottom: 0;
+    }
+
+    .section-about-me{
+        width: 55%;
+        padding-top: .2rem;
+    }
+
+    body{
+        padding: 6rem;
+        padding-top: 3rem;
+    }
+
+    input#header-menu ~ ul {
+        width: 90%;
+    }
+
+    .section-image {
+        width: 40%;
+    }
+}
+
+
+@media screen and (min-width: 1600px) {
+    .section-image{
+        margin-top: 7%;
+        width: 40%;
+    }
+
+    .section-about-me{
+        padding-top: 0px;
+    }
+
+    body{
+        padding: 7rem;
+    }
+
+    input#header-menu ~ ul {
+        width: 90%;
+    }
+}
+
+
+
+
+

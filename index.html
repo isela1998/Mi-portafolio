@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <header id="header">
+        <nav class="header-menu">
+            <input type="checkbox" id="header-menu">
+            <label for="header-menu">
+                <img src="./assets/images/menu 1.svg" alt="Menú">
+            </label>
+            <ul>
+                <li><a class="active" onclick="hide()" href="#header">Home</a></li>
+                <li><a onclick="hide()" href="#services">Servicios</a></li>
+                <li><a onclick="hide()" href="#about-me">Acerca de mí</a></li>
+                <li><a onclick="hide()" href="#skills">Mis habilidades</a></li>
+                <li><a onclick="hide()" href="#portfolio">Mi portafolio</a></li>
+                <li><a onclick="hide()" href="#contact-info">Contacto</a></li>
+            </ul>
+        </nav>
+        <section class="logo">
+            <img src="./assets/images/Group 84-1.svg" alt="Logo">
+        </section>
+        <section class="section-header">
+            <div class="section-image">
+                <img src="./assets/images/perfil4.png" alt="Me">
+            </div>
+            <div class="section-about-me">
+                <span class="Im">Hola, soy Isela</span><br>
+                <span class="title">Full Stack <br> Developer</span>
+                <div class="icons-box">
+                    <a href="https://www.linkedin.com/in/isela-coromoto-infante-fern%C3%A1ndez-365b0013b/" target="_blank"><img src="./assets/images/linkedin-in.svg" alt="icon"></a>
+                    <a href="https://www.facebook.com/isela.c.infante.fernandez" target="_blank"><img src="./assets/images/facebook.svg" alt="icon"></a>
+                    <a href="https://api.whatsapp.com/send?phone=584120693002" target="_blank"><img src="./assets/images/whatsapp.svg" alt="icon"></a>
+                </div><br>
+                <a class="contact" href="#contact-info"><span></span>Contáctame</a>
+            </div>
+        </section>
+    </header>
+    <section id="services" class="services">
+        <h2>SERVICIOS</h2>
+        <a class="arrow-left" onclick="showServices()"><img src="./assets/images/arrow-left 1.svg" alt="icon"></a>
+        <a class="arrow-right" onclick="showServices()"><img src="./assets/images/arrow-right 1.svg" alt="icon"></a>
+    </section>
+    <section id="services-box" class="services-box">
+        <div>
+            <img src="./assets/images/iconoir_design-pencil.svg" alt="pencil">
+            <h3>Frontend</h3>
+            <p>Planificación, conceptualizacion y organizacion del contenido</p>
+        </div>
+        <div>
+            <img src="./assets/images/feather_search.svg" alt="backend">
+            <h3>Backend</h3>
+            <p>Base de datos, procesamiento de informacion, interconectividad</p>
+        </div>
+    </section>
+    <section id="services-box-1" class="services-box hide">
+        <div>
+            <img src="./assets/images/database-solid.svg" alt="database">
+            <h3>Base de datos</h3>
+            <p>Almacenamiento, consulta y manipulación de los datos</p>
+        </div>
+        <div>
+            <img src="./assets/images/city-solid.svg" alt="automatize">
+            <h3>S.I.G</h3>
+            <p>Automatizacion de procesos. Planificación y control</p>
+        </div>
+    </section>
+    <section id="about-me" class="about-me">
+        <div class="logo-1">
+            <img src="./assets/images/Group 84.svg" alt="logo">
+        </div>
+        <h2>ACERCA <br> DE MÍ</h2>
+        <p>Soy Ing. en Computación, con más de 3 años de experiencia en desarrollo de sistemas bajo entorno web, principalmente enfocados en la automatización de los procesos dentro de una organización. Me caracteriza la meticulosidad, el perfeccionismo, los trabajos de calidad y la facilidad para encontrar soluciones ante cualquier requerimiento. Me gusta aprender y también enseñar.</p>
+        <div class="logos-boxes">
+            <div class="uvm-logo">
+                <img src="./assets/images/uniojeda-logo.png" alt="UVM">
+                <h4>Uniojeda</h4>
+                <small>2015-2019</small>
+            </div>
+            <div class="academlo-logo">
+                <img src="./assets/images/urbe-logo.png" alt="Academlo">
+                <h4>URBE</h4>
+                <small>2019-2020</small>
+            </div>
+            <div class="academlo-logo">
+                <img src="./assets/images/academlo-logo.png" alt="Academlo">
+                <h4>Academlo</h4>
+                <small>2022-Actualidad</small>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="skills">
+        <h2>MIS <br> HABILIDADES</h2>
+        <div class="skills-boxes">
+            <div class="box-percentage-95">
+                <span>95%</span>
+            </div>
+            <div class="box-text">
+                <span>Web design</span>
+            </div>
+        </div>
+        <div class="skills-boxes">
+            <div class="box-percentage-95">
+                <span>95%</span>
+            </div>
+            <div class="box-text">
+                <span>HTML, CSS, Javascript</span>
+            </div>
+        </div>
+        <div class="skills-boxes">
+            <div class="box-percentage-85">
+                <span>85%</span>
+            </div>
+            <div class="box-text">
+                <span>Python + Django</span>
+            </div>
+        </div>
+        <div class="skills-boxes">
+            <div class="box-percentage-70">
+                <span>70%</span>
+            </div>
+            <div class="box-text">
+                <span>PostgreSQL</span>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio" class="portfolio">
+        <h2>MI <br> PORTAFOLIO</h2>
+        <div class="portfolio-box">
+            <div>
+                <a href="https://importacionessasha.herokuapp.com/" target="_blank"><img src="./assets/images/sasha.png" alt="pencil"><h3>Sasha</h3></a>
+            </div>
+            <div>
+                <a href="https://equibiomed.herokuapp.com/" target="_blank"><img src="./assets/images/equibiomed.png"><h3>Equibiomed</h3></a>
+            </div>
+        </div>
+        <div class="portfolio-box">
+            <div>
+                <a href="https://naderca.herokuapp.com" target="_blank"><img src="./assets/images/nader.png" alt="pencil"><h3>Naderca</h3></a>
+            </div>
+            <div>
+                <a href="https://invmicasa.herokuapp.com/" target="_blank"><img src="./assets/images/micasa.png" alt="backend"><h3>Modelo</h3></a>
+            </div>
+        </div>
+    </section>
+    <section id="contact-info" class="contact-info">
+        <h2>CONTACTO</h2>
+        <div class="contact-box">
+            <div>
+                <img src="./assets/images/phone 3.svg" alt="phone"><h3>Teléfono</h3>
+                <small><a href="https://api.whatsapp.com/send?phone=584120693002" target="_blank">+584120693002</a></small>
+            </div>
+            <div>
+                <img src="./assets/images/mail 4.svg" alt="email"><h3>Email</h3>
+                <small>infantefernandezisela@gmail.com</small>
+            </div>
+        </div>
+    </section>
+    <footer>Hecho con ♥ en Academlo</footer>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
