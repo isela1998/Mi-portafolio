@@ -318,7 +318,7 @@ input#header-menu:checked ~ ul{
     align-items: center;
 }
 
-.box-percentage-95, .box-percentage-85, .box-percentage-70{
+.box-percentage-80, .box-percentage-75, .box-percentage-60{
     position: relative;
     width: 30%;
     padding: 1rem;
@@ -329,30 +329,30 @@ input#header-menu:checked ~ ul{
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-.box-percentage-95:before{
+.box-percentage-80:before{
     content: "";
     position: absolute;
-    width: 85%;
+    width: 70%;
     height: 1px;
     top: 0;
     left: 0%;
     border-top: solid var(--principal-color) 5px;
 }
 
-.box-percentage-85:before{
+.box-percentage-75:before{
     content: "";
     position: absolute;
-    width: 75%;
+    width: 65%;
     height: 1px;
     top: 0;
     left: 0%;
     border-top: solid var(--principal-color) 5px;
 }
 
-.box-percentage-70:before{
+.box-percentage-60:before{
     content: "";
     position: absolute;
-    width: 60%;
+    width: 50%;
     height: 1px;
     top: 0;
     left: 0%;
@@ -709,7 +709,6 @@ footer{
         width: 40%;
     }
 }
-
 
 @media screen and (min-width: 1600px) {
     .section-image{
